@@ -28,9 +28,6 @@ RUN yarn install --production
 
 COPY . /myapp
 
-# この位置に追加して大丈夫？
-RUN chmod a+x bin/render-build.sh
-
 RUN bundle exec rails assets:precompile
 
 EXPOSE 3000
