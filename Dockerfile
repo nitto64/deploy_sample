@@ -34,8 +34,6 @@ RUN yarn add esbuild
 # Precompile assets
 RUN SECRET_KEY_BASE_DUMMY=1 bundle exec rails assets:precompile
 
-RUN bundle exec rails assets:precompile
-
 EXPOSE 3000
 
 CMD ["bundle", "exec", "puma", "-C", "config/puma.rb"]
